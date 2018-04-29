@@ -34,7 +34,7 @@ func eItems(w http.ResponseWriter, r *http.Request) {
 	intentName := request.Result.Metadata.IntentName
 
 	if intentName == "myStatus" {
-		speech = "There are 2 items in preparation. 1 item is in review with the office. Total amount available is 500k.2 items are pending for approval. Available balance 300k. For Item 1, report is due for submission next week."
+		speech = "There are 2 items in preparation. 1 item is in review with the office. Total amount available is 500k. 2 items are pending for approval. Available balance 300k. For Item 1, report is due for submission next week."
 		displayText = "There are 2 items in preparation. 1 item is in review with the office. Total amount available is 500k. 2 items are pending for approval. Available balance 300k. For Item 1, report is due for submission next week."
 	} else if intentName == "anyNewUpdates" {
 		speech = "grants.gov published 20 new opportunities and updated 40 opportunities."
