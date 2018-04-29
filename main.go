@@ -22,7 +22,7 @@ func main() {
 
 func eItems(w http.ResponseWriter, r *http.Request) {
 
-	fmt.Println("Received request to get device details")
+	fmt.Println("Received request to get epTest details")
 	var request WebHookRequest
 	_ = json.NewDecoder(r.Body).Decode(&request)
 	body, err := ioutil.ReadAll(r.Body)
@@ -34,17 +34,17 @@ func eItems(w http.ResponseWriter, r *http.Request) {
 	intentName := request.Result.Metadata.IntentName
 
 	if intentName == "myStatus" {
-		speech = "There are 2 items in preparation. 1 item is in review the office. Total amount available is 500 k.m2 items are pending for approval. Availble balence 300 k. For Item 1 report is due for submition in next week."
-		displayText = "There are 2 items in preparation. 1 item is in review the office. Total amount available is 500 k. 2 items are pending for approval. Availble balence 300 k. For Item 1 report is due for submition in next week."
+		speech = "There are 2 items in preparation. 1 item is in review with the office. Total amount available is 500k.2 items are pending for approval. Available balance 300k. For Item 1, report is due for submission next week."
+		displayText = "There are 2 items in preparation. 1 item is in review with the office. Total amount available is 500k. 2 items are pending for approval. Available balance 300k. For Item 1, report is due for submission next week."
 	} else if intentName == "anyNewUpdates" {
-		speech = "grants.gov publised 20 new oppurtunites and updated 40 oppurtunites."
-		displayText = "grants.gov publised 20 new oppurtunites and updated 40 oppurtunites."
+		speech = "grants.gov published 20 new opportunities and updated 40 opportunities."
+		displayText = "grants.gov published 20 new opportunities and updated 40 opportunities."
 	} else if intentName == "getNIHOpp" {
 		speech = "70 opportunities posted"
-		displayText = "70 Opportunities posted"
+		displayText = "70 opportunities posted"
 	} else if intentName == "createProposal" {
-		speech = "Not ingetrated with creation App"
-		displayText = "Not ingetrated with creation App"
+		speech = "Not integrated with creation App"
+		displayText = "Not integrated with creation App"
 	}
 
 	hookResp := WebHookResp{
