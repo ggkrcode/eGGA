@@ -1,0 +1,12 @@
+{
+	"ImportPath": "eGGA",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.1-15-gb57cb16",
+			"Rev": "b57cb1605fd11ba2ecfa7f68992b4b9cc791934d"
+		}
+	]
+}
